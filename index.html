@@ -5,8 +5,8 @@ layout: default
 <div>
   {% for post in site.posts %}
     <article>
-  　  {{ post.date | date: "%Y/%m/%d" }}
-      <h2><a href="{{site.baseurl}}{{post.url}">{{ post.title }}</a></h2>
+  　  {{post.date | date: "%Y/%m/%d"}}
+      <h2><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
     </article>
   {% endfor %}
 </div>

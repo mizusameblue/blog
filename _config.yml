@@ -10,17 +10,9 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: post
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
       permalink: blog/:year/:month/:title:output_ext
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: page
-      author_profile: true

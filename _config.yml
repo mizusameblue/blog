@@ -4,4 +4,4 @@ description: のそのそ
 url: https://mizusameblue.github.io
 baseurl: /blog
 
-permalink: blog/:year/:month/:title:output_ext
+permalink: /:year/:month/:title:output_ext

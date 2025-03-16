@@ -3,16 +3,4 @@ title: same log
 description: [A short description of your site's purpose]
 url: https://mizusameblue.github.io
 baseurl: /blog
-
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-      permalink: blog/:year/:month/:title:output_ext
+permalink: blog/:year/:month/:title:output_ext

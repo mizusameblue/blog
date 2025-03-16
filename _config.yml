@@ -1,5 +1,6 @@
-title: Slate theme
+title: same log
 description: Slate is a theme for GitHub Pages.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-slate
+permalink: /:year/:month/:title:output_ext

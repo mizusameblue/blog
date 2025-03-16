@@ -16,7 +16,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          {% if page.url == "/blog/" %}
+          {% if page.url == site.baseurl or page.url == site.baseurl | append: "/" %}
           <h1 id="project_title"><a href="{{site.baseurl}}">{{ site.title | default: site.github.repository_name }}</a></h1>
           {% else %}
           <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>

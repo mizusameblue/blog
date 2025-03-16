@@ -4,7 +4,4 @@ description: [A short description of your site's purpose]
 url: https://mizusameblue.github.io
 baseurl: /blog
 
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:title:output_ext
+permalink: /:year/:month/:title:output_ext

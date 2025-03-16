@@ -1,7 +1,5 @@
-theme: jekyll-theme-cayman
-title: same log
-description: のそのそ
-url: https://mizusameblue.github.io
-baseurl: /blog
-
-permalink: /:year/:month/:title:output_ext
+title: Slate theme
+description: Slate is a theme for GitHub Pages.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-slate

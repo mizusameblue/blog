@@ -2,7 +2,7 @@
 title: 月別アーカイブ
 ---
 
-{% assign posts_by_month = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
+{% assign posts_by_month = site.posts | group_by_exp: "post", "post.date | date: '%Y年%m月'" %}
 
 {% for month in posts_by_month %}
 <details>

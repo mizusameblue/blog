@@ -2,18 +2,7 @@
 title: 月別アーカイブ
 ---
 
-{% assign yearmonths = "" | split: "|" %}
-{% assign count = 0 %}
-{% assign prev = yearmonths_dupli | first %}
-{% for ym in yearmonths_dupli %}
-    {% if prev == ym %}
-        {% assign count = count | plus: 1 %}
-    {% else %}
-        {% assign item = "" | split: "" | push: prev | push: count %}
-        {% assign yearmonths = yearmonths | push: item %}
-        {% assign count = 1 %}
-    {% endif %}
-    {% assign prev = ym %}
+{% for post in site.posts %}
+<time>{{post.date | date: "%Y/%m/%d"}}</time>
+<h2><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
 {% endfor %}
-{% assign item = "" | split: "" | push: ym | push: count %}
-{% assign yearmonths = yearmonths | push: item %}

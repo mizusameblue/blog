@@ -2,8 +2,8 @@ title: same log
 description: There are Sharks Underwater!!
 url: https://mizusameblue.github.io
 baseurl: /blog
-
 permalink: /:year/:month/:title:output_ext
+excerpt_separator: "<!--more-->"
 
 defaults:
   -

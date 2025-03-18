@@ -3,12 +3,12 @@ title: タグ一覧
 permalink: /tags.html
 ---
 {% for tag in site.tags %}
-<article>
-  <h1 id="tag.{{ tag[0] }}">{{ tag[0] }}</h1>
+<details id="tag.{{ tag[0] }}">
+  <summary>{{ tag[0] }}</summary>
   <ul>
     {% for post in tag[1] %}
     <li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-</article>
+</details> 
 {% endfor %}

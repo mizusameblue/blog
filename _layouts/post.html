@@ -15,18 +15,21 @@ layout: default
       {{ content }}
 
     </div>
-    
+
+    {% if page.next or page.previous %}
     <div class="pager">
-
+      {% if page.next %}
       <p class="pager__item--next">
-        <a href="">&lt; 次のページ</a>
+        <a href="{{ page.next.url | relative_url }}">&lt; {{ page.next.title }}</a>
       </p>
-
+      {% endif %}
+      {% if page.previous %}
       <p class="pager__item--prev">
-        <a href="">前のページ &gt;</a>
+        <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} &gt;</a>
       </p>
-
+      {% endif %}
     </div>
+    {% endif %}
     
   </div>
 </article>

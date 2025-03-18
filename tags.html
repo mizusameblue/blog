@@ -4,7 +4,7 @@ permalink: /tags.html
 ---
 {% for tag in site.tags %}
 <details id="tag.{{ tag[0] }}">
-  <summary>{{ tag[0] }}</summary>
+  <summary>{{ tag[0] }} [{{tag[1].size}}]</summary>
   <ul>
     {% for post in tag[1] %}
     <li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>

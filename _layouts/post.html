@@ -2,12 +2,10 @@
 layout: default
 ---
 
-<article class="contents page">
-  <div class="container">
-
-    <div class="page__header">
-      <h1 class="page__title">{{ page.title }}</h1>
-      <p class="page__date">{{ page.date | date: "%Y/%m/%d" }}</p>
+<article class="post">
+  <div class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <time class="post-date">{{ page.date | date: "%Y/%m/%d" }}</time>
       <ul>
         {% for tag in page.tags %}
         <li><a href="/blog/tags.html#tag_{{ tag }}">{{ tag }}</a></li>
@@ -15,23 +13,17 @@ layout: default
       </ul>
     </div>
 
-    <div class="page__body">
-
+    <div class="post-body">
       {{ content }}
-
     </div>
 
     {% if page.next or page.previous %}
-    <div class="pager">
+    <div class="blog-pager">
       {% if page.next %}
-      <p class="pager__item--next">
-        <a href="{{ page.next.url | relative_url }}">&lt; {{ page.next.title }}</a>
-      </p>
+      <a class="blog-pager-newer-link" href="{{ page.next.url | relative_url }}">&lt; {{ page.next.title }}</a>
       {% endif %}
       {% if page.previous %}
-      <p class="pager__item--prev">
-        <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} &gt;</a>
-      </p>
+      <a class="blog-pager-oler-link" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} &gt;</a>
       {% endif %}
     </div>
     {% endif %}

@@ -7,7 +7,7 @@ layout: default
   <archive class='list'>
     <h2><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
     <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
-  </archive>
+  </archive>{{post.thumbnail}}
 {% endfor %}
 
 <!-- Pagination links -->

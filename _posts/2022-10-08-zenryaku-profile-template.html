@@ -1,0 +1,291 @@
+---
+title: 前略プロフィール風テンプレートを作ってみた
+tags:
+  - Web 制作
+---
+<p>このブログにプロフィールページでも設けようと思ったが、どうせ作るなら普通じゃつまらない。</p>
+<p>そこでひらめいたのが、今は亡き前略プロフィールの再現だった。</p>
+<p>「前略プロフィール　テンプレート」で検索しても、それ風の HTML と CSS を配布しているところは見つからなかったので、自分で1から作ることにした。</p>
+
+<!--more-->
+
+<h2>テンプレート作成方法</h2>
+
+<p>サービスが終了したサイトといえどウェブアーカイブにはデータが残っている。</p>
+<p>本当はソースコードを丸パクリしようと思ったが、やたらと <code>div</code> まみれだし <code>style</code> 属性に CSS を直に埋め込んでるしで、煩雑な印象だ。</p>
+<p>そのため、デザインを元に極力近付けつつ HTML と CSS を書き直した。</p>
+<p>プロフィールの項目は以下の知恵袋に載っていたものを流用。</p>
+
+<ul>
+  <li><a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1130365146" rel="noopener" target="_blank">前略プロフィールの全項目を教えてください! - HNHNの由来性別誕生日... - Yahoo!知恵袋</a></li>
+</ul>
+
+<p>ただ、下の記事の画像を見る限り、他にも項目はあるっぽい。</p>
+
+<ul>
+  <li><a href="https://togetter.com/kiji/2015/06/29/25292" rel="noopener" target="_blank">今さらだけど「前略プロフィール」をやってみた - Togetter</a></li>
+</ul>
+
+<h2>前略プロフィール風テンプレート</h2>
+
+<p>HTML,CSSを分けてみたけど特に意味はない。</p>
+
+<pre><code>&lt;div class="prof-box"&gt;
+
+&lt;h2&gt;名前 * Name&lt;/h2&gt;
+
+&lt;img alt="プロフィール画像" height="240" width="320" src="[画像 URL]"/&gt;
+
+&lt;h3&gt;HN&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;HNの由来&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;性別&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;誕生日&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;星座&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;血液型&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;前世&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;住んでいるところ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;生まれたところ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;職業&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;学年&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;絡むーちょ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;似ている芸能人&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;身長&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;体重&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;足のサイズ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;手の長さ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;趣味&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;特技&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;握力&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;髪型&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;口癖&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;性格&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;嗜好品&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;自慢なこと&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;持っている資格&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;使っている携帯電話&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな男性のタイプ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな女性のタイプ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな言葉&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな芸能人&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな食べ物&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;嫌いな食べ物&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな飲み物&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;嫌いな飲み物&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな教科&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;嫌いな教科&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きなテレビ番組&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな映画&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな本&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きなスポーツ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな音楽&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きなブランド&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;愛用の香水&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな花&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きなゲーム&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;愛車&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;将来の夢&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;好きな動物&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;休日の過ごし方&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;尊敬する人&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;今一番欲しいもの&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;今一番行きたいところ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;今一番やりたいこと&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;よく使う路線&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;よく遊ぶところ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;カラオケでよく歌う曲&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;初めて買ったＣＤ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;マイブーム&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;最近ひそかに興味があること&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;生まれ変わったら&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;世界平和に必要なのは&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;兎に角主張したい事&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;疑問に思っている事&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3&gt;ここだけの話&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+
+<pre><code>&lt;style&gt;
+.prof-box{
+  margin: 30px 0;
+  padding: 10px 0 20px;
+  width: 100%;
+  line-height: 1;
+  background: #fff;
+  color: #333;
+}
+@media(min-width: 480px){
+  .prof-box{
+    margin: 30px auto;
+    padding: 10px 10px 20px;
+    width: 360px;
+    border: 1px solid #ccc;
+  }
+}
+.prof-box h2,
+.prof-box h3{
+  background: green;
+  color: #fff;
+  border: none;
+  font-size: medium;
+  font-weight: normal
+}
+.prof-box h2{
+  margin: 10px 0;
+  padding: 0 5px;
+  text-align: center;
+}
+.prof-box h3{
+  margin: 10px 20px;
+  padding: 0 5px;
+}
+.prof-box img{
+  display: block;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+.prof-box p{
+  margin: 10px 20px;
+  padding: 0;
+  line-height: 1.6;
+  font-size: small;
+}
+.prof-box a{
+  color: #333;
+  text-decoration: underline;
+}
+&lt;/style&gt;</code></pre>
+
+<h2>あとがき</h2>
+
+<p>ちなみにテンプレートに則って回答してみたが、恥ずかしくなって公開するのはやめた。プロフィールページは次の機会に作ろう……。</p>    

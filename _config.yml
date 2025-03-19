@@ -17,3 +17,10 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: "post"
+
+#pager
+plugins:
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "page:num"

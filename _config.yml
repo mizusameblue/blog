@@ -19,7 +19,7 @@ defaults:
       layout: "post"
 
 #pager
-gems:
+plugins:
   - jekyll-paginate
 
 paginate: 10

@@ -16,7 +16,7 @@ layout: default
       {% if post.tags %}
       <div class='list-label'>タグ：
         {% for tag in post.tags %}
-        <a href="/blog/tags.html#tag_{{ tag }}" class='label-name'>{{ tag }}</a>{%  if forloop.last != true  %},{{% endif %}}
+        <a href="/blog/tags.html#tag_{{ tag }}" class='label-name'>{{ tag }}</a>{% if forloop.last != true %},{% endif %}
         {% endfor %}
       </div>
       {% endif %}

@@ -20,10 +20,10 @@ layout: default
     {% if page.next or page.previous %}
     <div class="blog-pager">
       {% if page.next %}
-      <a class="blog-pager-newer-link" href="{{ page.next.url | relative_url }}">&lt; {{ page.next.title }}</a>
+      <a class="button blog-pager-newer-link" href="{{ page.next.url | relative_url }}">&lt; {{ page.next.title }}</a>
       {% endif %}
       {% if page.previous %}
-      <a class="blog-pager-oler-link" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} &gt;</a>
+      <a class="button blog-pager-oler-link" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} &gt;</a>
       {% endif %}
     </div>
     {% endif %}

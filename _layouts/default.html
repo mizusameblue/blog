@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "ja-JP" }}">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content='width=device-width, initial-scale=1' name='viewport'/>
-    {% seo %}
-    {% include head-custom.html %}
-  </head>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url }}"/>
+  {% seo %}
+</head>
 
-  <body>
-<div class="wrapper">
-    <!-- HEADER -->
-    <header class="header">
-      <h1 class="blog-title"><a href="{{site.baseurl}}">{{ site.title | default: site.github.repository_name }}</a></h1>
-      <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-    </header>
-
-    <nav class='navigation'>
-      {% for item in site.data.navigation %}
-      <a href="{{site.baseurl}}{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>{{ item.name }}</a>
-      {% endfor %}
-    </nav>
-
-    <!-- MAIN CONTENT -->
-    <main class='main'>
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </main>
-
-    <!-- FOOTER  -->
-    <footer class="footer">
-      {% if site.github.is_project_page %}
-      <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-      {% endif %}
-    </footer>
-</div>
-  </body>
+<body>
+  <div class="wrapper">
+  <!-- HEADER -->
+  <header class="header">
+  <h1 class="blog-title"><a href="{{site.baseurl}}">{{ site.title | default: site.github.repository_name }}</a></h1>
+  <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+  </header>
+  
+  <nav class='navigation'>
+  {% for item in site.data.navigation %}
+  <a href="{{site.baseurl}}{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>{{ item.name }}</a>
+  {% endfor %}
+  </nav>
+  
+  <!-- MAIN CONTENT -->
+  <main class='main'>
+  <section id="main_content" class="inner">
+  {{ content }}
+  </section>
+  </main>
+  
+  <!-- FOOTER  -->
+  <footer class="footer">
+  {% if site.github.is_project_page %}
+  <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+  {% endif %}
+  </footer>
+  </div>
+</body>
 </html>

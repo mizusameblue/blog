@@ -1,3 +1,8 @@
+# Site Settings
+lang: ja                            # 言語を日本語に設定(デフォルトでは"en")
+favicon: /assets/img/favicon.png    # faviconを設定
+timezone: Asia/Tokyo                # タイムゾーンを東京に設定
+
 title: same log
 description: There are Sharks Underwater!!
 url: https://mizusameblue.github.io

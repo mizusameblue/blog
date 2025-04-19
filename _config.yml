@@ -1,20 +1,5 @@
-# Site Settings
 lang: ja                            # 言語を日本語に設定(デフォルトでは"en")
-favicon: /assets/img/favicon.png    # faviconを設定
 timezone: Asia/Tokyo                # タイムゾーンを東京に設定
-
-# リモートテーマを設定
-remote_theme: chrisrhymes/bulma-clean-theme
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-seo-tag
-  - kramdown-parser-gfm
-  - jekyll-redirect-from
-  - jekyll-remote-theme   # リモートテーマプラグイン追加
-  - jemoji                # 絵文字プラグイン追加
 
 title: same log
 description: There are Sharks Underwater!!
